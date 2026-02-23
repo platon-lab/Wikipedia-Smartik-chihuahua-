@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вікіпедія Смартик — Енциклопедія про собаку Смартик</title>
+    <meta name="description" content="Це енциклопедія про слухнняного пса Смартика!">
+    <meta name="keywords" content="Смартик, Вікіпедія, енциклопедія, собака, пес.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Основні налаштування */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f6f6f6;
+            color: #202124;
+            scroll-behavior: smooth;
+        }
+
+        /* Анімація появи */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Стилі заголовка */
+        .wiki-header {
+            border-bottom: 1px solid #a2a9b1;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        .wiki-header h1 {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            font-weight: 400;
+            font-size: 2.5em;
+            margin: 0;
+            color: #000;
+        }
+
+        .wiki-nav {
+            font-size: 13px;
+            color: #54595d;
+            margin-bottom: 15px;
+        }
+
+        /* Контент */
+        .wiki-content {
+            display: flex;
+            gap: 30px;
+            line-height: 1.7;
+        }
+
+        .wiki-text {
+            flex: 1;
+            font-size: 16px;
+        }
+
+        /* Покращений інфобокс */
+        .infobox {
+            width: 300px;
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 15px;
+            font-size: 0.85em;
+            float: right;
+            border-radius: 2px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .infobox-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            background-color: #eaecf0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .infobox img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+            margin-bottom: 10px;
+            border: 1px solid #c8ccd1;
+        }
+
+        .infobox table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .infobox th {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #fff;
+            background-color: #eff1f3;
+            width: 40%;
+        }
+
+        .infobox td {
+            padding: 8px;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+        /* Список команд */
+        .commands-list {
+            background: #fdfdfd;
+            border-left: 5px solid #34a853;
+            padding: 15px 20px 15px 40px;
+            margin: 20px 0;
+            list-style-type: square;
+        }
+
+        .commands-list li {
+            margin-bottom: 8px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #4285F4;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 850px) {
+            .wiki-content { flex-direction: column-reverse; }
+            .infobox { width: 100%; float: none; margin: 0 0 20px 0; }
+            .main-container { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="wiki-nav">
+            <span>Матеріал з Вікіпедії — вільної енциклопедії.</span>
+        </div>
+        
+        <div class="wiki-header">
+            <h1>Смартик (чихуахуа)</h1>
+        </div>
+
+        <div class="wiki-content">
+            <div class="wiki-text">
+                <p><strong>Смартик</strong> — видатний представник породи чихуахуа, відомий своїми інтелектуальними здібностями та харизматичним характером. Станом на 2024 рік є об'єктом уваги завдяки своєму вмінню бездоганно виконувати команди та взаємодіяти з людьми.</p>
+                
+                <h2>Опис</h2>
+                <p>Смартик відрізняється компактними розмірами, проте володіє енергією великого собаки. Він є яскравим прикладом того, що інтелект собаки не залежить від її розміру. Швидко адаптується до нових умов та обожнює увагу публіки.</p>
+
+                <h2>Здібності та команди</h2>
+                <p>На даний момент Смартик досконало володіє трьома основними командами, що демонструють його високу дисципліну:</p>
+                <ul class="commands-list">
+                    <li><strong>Сидіти</strong> — класична команда витримки.</li>
+                    <li><strong>Лежати</strong> — миттєве виконання з будь-якого положення.</li>
+                    <li><strong>Кружочок</strong> — артистичне виконання оберту навколо своєї осі, що стало його "візитівкою".</li>
+                </ul>
+
+                <h2>Цікаві факти</h2>
+                <ul>
+                    <li>Незважаючи на мініатюрність, Смартик вважає себе головним охоронцем території.</li>
+                    <li>Ім'я походить від англійського <i>Smart</i> (розумний), що повністю виправдано швидкістю його навчання.</li>
+                    <li>Його улюблена нагорода за виконану команду — маленька порція смаколика та щира похвала.</li>
+                </ul>
+            </div>
+
+            <div class="infobox">
+                <div class="infobox-title">Смартик</div>
+                <img src="Смартик.png" alt="Фото Смартика">
+                <p style="text-align: center; font-size: 0.8em; color: #555; margin-top: 0;">Смартик у домашній обстановці</p>
+                <table>
+                    <tr>
+                        <th>Порода</th>
+                        <td>Чихуахуа</td>
+                    </tr>
+                    <tr>
+                        <th>Вид</th>
+                        <td>Собака свійський</td>
+                    </tr>
+                    <tr>
+                        <th>Навички</th>
+                        <td>3 команди</td>
+                    </tr>
+                    <tr>
+                        <th>Статус</th>
+                        <td><span class="status-badge">Найкращий хлопчик</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
