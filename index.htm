@@ -922,6 +922,12 @@
             <a onclick="goPage(2)">2</a>
             <a onclick="goPage(3)">3</a>
             <a onclick="goPage(4)">4</a>
+            <a onclick="goPage(5)">5</a>
+            <a onclick="goPage(6)">6</a>
+            <a onclick="goPage(7)">7</a>
+            <a onclick="goPage(8)">8</a>
+            <a onclick="goPage(9)">9</a>
+            <a onclick="goPage(10)">10</a>
             <a onclick="goPage(2)" class="pg-arrow" title="Наступна сторінка">→</a>
         </div>
         </div><!-- /page-1 -->
@@ -1188,6 +1194,12 @@
             <span class="pg-current">2</span>
             <a onclick="goPage(3)">3</a>
             <a onclick="goPage(4)">4</a>
+            <a onclick="goPage(5)">5</a>
+            <a onclick="goPage(6)">6</a>
+            <a onclick="goPage(7)">7</a>
+            <a onclick="goPage(8)">8</a>
+            <a onclick="goPage(9)">9</a>
+            <a onclick="goPage(10)">10</a>
             <a onclick="goPage(3)" class="pg-arrow" title="Наступна сторінка">→</a>
         </div>
         </div><!-- /page-2 -->
@@ -1314,11 +1326,17 @@
         <!-- Пагінація сторінки 3 -->
         <div class="wiki-pagination">
             <span class="pg-label">Сторінка:</span>
-            <a onclick="goPage(1)" class="pg-arrow" title="Попередня сторінка">←</a>
+            <a onclick="goPage(2)" class="pg-arrow" title="Попередня сторінка">←</a>
             <a onclick="goPage(1)">1</a>
             <a onclick="goPage(2)">2</a>
             <span class="pg-current">3</span>
             <a onclick="goPage(4)">4</a>
+            <a onclick="goPage(5)">5</a>
+            <a onclick="goPage(6)">6</a>
+            <a onclick="goPage(7)">7</a>
+            <a onclick="goPage(8)">8</a>
+            <a onclick="goPage(9)">9</a>
+            <a onclick="goPage(10)">10</a>
             <a onclick="goPage(4)" class="pg-arrow" title="Наступна сторінка">→</a>
         </div>
         </div><!-- /page-3 -->
@@ -1499,7 +1517,8 @@
                     <strong>Навігація по статті:</strong><br>
                     <a href="#" onclick="goPage(1);return false;" style="color:#0645ad;">← Сторінка 1 (Опис)</a><br>
                     <a href="#" onclick="goPage(2);return false;" style="color:#0645ad;">← Сторінка 2 (Досягнення)</a><br>
-                    <a href="#" onclick="goPage(3);return false;" style="color:#0645ad;">← Сторінка 3 (Вікторина)</a>
+                    <a href="#" onclick="goPage(3);return false;" style="color:#0645ad;">← Сторінка 3 (Вікторина)</a><br>
+                    <a href="#" onclick="goPage(5);return false;" style="color:#0645ad;">→ Сторінка 5 (Далі)</a>
                 </div>
             </div>
         </div>
@@ -1512,10 +1531,374 @@
             <a onclick="goPage(2)">2</a>
             <a onclick="goPage(3)">3</a>
             <span class="pg-current">4</span>
+            <a onclick="goPage(5)">5</a>
+            <a onclick="goPage(6)">6</a>
+            <a onclick="goPage(7)">7</a>
+            <a onclick="goPage(8)">8</a>
+            <a onclick="goPage(9)">9</a>
+            <a onclick="goPage(10)">10</a>
+            <a onclick="goPage(5)" class="pg-arrow" title="Наступна сторінка">→</a>
         </div>
         </div><!-- /page-4 -->
 
+
+        <!-- ===== СТОРІНКА 5 — МАЛЮВАЛКА ===== -->
+        <div class="page" id="page-5">
+        <div class="wiki-content">
+            <div class="wiki-text">
+
+                <h2>🎨 Намалюй Смартика</h2>
+                <p>Тут ти можеш намалювати свого Смартика! Обери колір і розмір пензля, і твори мистецтво прямо в браузері.</p>
+
+                <div style="margin:20px 0;">
+                    <label><strong>Колір:</strong></label>
+                    <input type="color" id="paint-color" value="#E9C088" style="margin:0 10px;cursor:pointer;">
+                    <label><strong>Розмір пензля:</strong></label>
+                    <input type="range" id="paint-size" min="2" max="40" value="10" style="margin:0 10px;width:120px;">
+                    <span id="paint-size-val">10</span>px
+                    &nbsp;&nbsp;
+                    <button onclick="clearCanvas()" style="padding:6px 16px;background:#e53935;color:#fff;border:none;border-radius:4px;cursor:pointer;">🗑 Очистити</button>
+                    <button onclick="saveDrawing()" style="padding:6px 16px;background:#34a853;color:#fff;border:none;border-radius:4px;cursor:pointer;margin-left:8px;">💾 Зберегти</button>
+                    <label style="margin-left:10px;cursor:pointer;"><input type="checkbox" id="paint-eraser"> Гумка</label>
+                </div>
+                <canvas id="paint-canvas" width="700" height="400" style="border:2px solid #a2a9b1;border-radius:4px;cursor:crosshair;background:#fff;max-width:100%;display:block;"></canvas>
+
+                <p style="margin-top:10px;color:#54595d;font-size:14px;">💡 Підказка: Намалюй вушка, носик і хвостик — і Смартик буде в захваті від свого портрету!</p>
+            </div>
+            <div class="infobox">
+                <div class="infobox-title">Смартик</div>
+                <img src="Смартик.png" alt="Фото Смартика">
+                <p style="text-align:center;font-size:0.8em;color:#555;margin-top:0;">Смартик — 4-річний експерт з команд</p>
+                <table>
+                    <tr><th>Порода</th><td>Чихуахуа</td></tr>
+                    <tr><th>Вік</th><td>4 роки</td></tr>
+                    <tr><th>Колір шерсті</th><td>Соболь <span class="color-circle"></span></td></tr>
+                    <tr><th>Статус</th><td><span class="status-badge">Найкращий хлопчик</span></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="wiki-pagination">
+            <span class="pg-label">Сторінка:</span>
+            <a onclick="goPage(4)" class="pg-arrow" title="Попередня сторінка">←</a>
+            <a onclick="goPage(1)">1</a><a onclick="goPage(2)">2</a><a onclick="goPage(3)">3</a><a onclick="goPage(4)">4</a>
+            <span class="pg-current">5</span>
+            <a onclick="goPage(6)">6</a><a onclick="goPage(7)">7</a><a onclick="goPage(8)">8</a><a onclick="goPage(9)">9</a><a onclick="goPage(10)">10</a>
+            <a onclick="goPage(6)" class="pg-arrow" title="Наступна сторінка">→</a>
+        </div>
+        </div><!-- /page-5 -->
+
+
+        <!-- ===== СТОРІНКА 6 — ГЕНЕРАТОР ФРАЗ ===== -->
+        <div class="page" id="page-6">
+        <div class="wiki-content">
+            <div class="wiki-text">
+
+                <h2>💬 Що думає Смартик прямо зараз?</h2>
+                <p>Натисни кнопку — і дізнайся, які думки крутяться в розумній голівці Смартика в цю мить!</p>
+
+                <div style="text-align:center;margin:30px 0;">
+                    <div id="smartyk-thought" style="min-height:80px;padding:20px 30px;background:#f8f9fa;border:2px solid #a2a9b1;border-radius:8px;font-size:1.3em;line-height:1.6;color:#202124;position:relative;">
+                        <span style="font-size:2em;position:absolute;top:-20px;left:20px;">🐶</span>
+                        «Клікни кнопку нижче і я поділюся мудрістю...»
+                    </div>
+                    <button onclick="newThought()" style="margin-top:20px;padding:12px 30px;background:#4285F4;color:#fff;border:none;border-radius:50px;font-size:16px;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,0.15);">
+                        🧠 Що думає Смартик?
+                    </button>
+                    <button onclick="newThought(true)" style="margin-top:20px;margin-left:10px;padding:12px 20px;background:#f9a825;color:#fff;border:none;border-radius:50px;font-size:16px;cursor:pointer;">
+                        🧀 Думка про сир
+                    </button>
+                </div>
+
+                <h2>📊 Статистика дня Смартика</h2>
+                <p>Типовий день Смартика розбитий по годинах. Натисни на годину, щоб дізнатись, чим він займається!</p>
+                <div id="day-schedule" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin:20px 0;"></div>
+                <div id="schedule-detail" style="padding:15px;background:#f0f4ff;border:1px solid #3366cc;border-radius:4px;display:none;margin-top:10px;"></div>
+
+                <h2 style="margin-top:30px;">🎲 Генератор імені для нового друга</h2>
+                <p>Якщо у Смартика з'явиться друг — яке ім'я йому підійде? Натисни, щоб дізнатись!</p>
+                <div style="text-align:center;margin:20px 0;">
+                    <div id="name-result" style="font-size:1.5em;font-weight:bold;padding:15px;background:#f8f9fa;border:1px solid #a2a9b1;border-radius:4px;min-height:50px;"></div>
+                    <button onclick="generateName()" style="margin-top:15px;padding:10px 25px;background:#34a853;color:#fff;border:none;border-radius:50px;font-size:15px;cursor:pointer;">🎲 Генерувати ім'я</button>
+                </div>
+
+            </div>
+            <div class="infobox">
+                <div class="infobox-title">Смартик</div>
+                <img src="Смартик.png" alt="Фото Смартика">
+                <p style="text-align:center;font-size:0.8em;color:#555;margin-top:0;">Смартик — 4-річний експерт з команд</p>
+                <table>
+                    <tr><th>Порода</th><td>Чихуахуа</td></tr>
+                    <tr><th>Вік</th><td>4 роки</td></tr>
+                    <tr><th>Колір шерсті</th><td>Соболь <span class="color-circle"></span></td></tr>
+                    <tr><th>Статус</th><td><span class="status-badge">Найкращий хлопчик</span></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="wiki-pagination">
+            <span class="pg-label">Сторінка:</span>
+            <a onclick="goPage(5)" class="pg-arrow" title="Попередня сторінка">←</a>
+            <a onclick="goPage(1)">1</a><a onclick="goPage(2)">2</a><a onclick="goPage(3)">3</a><a onclick="goPage(4)">4</a><a onclick="goPage(5)">5</a>
+            <span class="pg-current">6</span>
+            <a onclick="goPage(7)">7</a><a onclick="goPage(8)">8</a><a onclick="goPage(9)">9</a><a onclick="goPage(10)">10</a>
+            <a onclick="goPage(7)" class="pg-arrow" title="Наступна сторінка">→</a>
+        </div>
+        </div><!-- /page-6 -->
+
+
+        <!-- ===== СТОРІНКА 7 — КРОСВОРД ===== -->
+        <div class="page" id="page-7">
+        <div class="wiki-content">
+            <div class="wiki-text">
+
+                <h2>✏️ Кросворд: Вгадай слово про Смартика</h2>
+                <p>Вгадай слова, пов'язані зі Смартиком! Введи відповідь і натисни «Перевірити».</p>
+
+                <div id="crossword-container" style="margin:20px 0;"></div>
+            </div>
+            <div class="infobox">
+                <div class="infobox-title">Смартик</div>
+                <img src="Смартик.png" alt="Фото Смартика">
+                <p style="text-align:center;font-size:0.8em;color:#555;margin-top:0;">Смартик — 4-річний експерт з команд</p>
+                <table>
+                    <tr><th>Порода</th><td>Чихуахуа</td></tr>
+                    <tr><th>Вік</th><td>4 роки</td></tr>
+                    <tr><th>Колір шерсті</th><td>Соболь <span class="color-circle"></span></td></tr>
+                    <tr><th>Статус</th><td><span class="status-badge">Найкращий хлопчик</span></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="wiki-pagination">
+            <span class="pg-label">Сторінка:</span>
+            <a onclick="goPage(6)" class="pg-arrow" title="Попередня сторінка">←</a>
+            <a onclick="goPage(1)">1</a><a onclick="goPage(2)">2</a><a onclick="goPage(3)">3</a><a onclick="goPage(4)">4</a><a onclick="goPage(5)">5</a><a onclick="goPage(6)">6</a>
+            <span class="pg-current">7</span>
+            <a onclick="goPage(8)">8</a><a onclick="goPage(9)">9</a><a onclick="goPage(10)">10</a>
+            <a onclick="goPage(8)" class="pg-arrow" title="Наступна сторінка">→</a>
+        </div>
+        </div><!-- /page-7 -->
+
+
+        <!-- ===== СТОРІНКА 8 — СИМУЛЯТОР ПРОГУЛЯНКИ ===== -->
+        <div class="page" id="page-8">
+        <div class="wiki-content">
+            <div class="wiki-text">
+
+                <h2>🐾 Симулятор прогулянки зі Смартиком</h2>
+                <p>Уяви, що ти вийшов гуляти зі Смартиком! Роби вибори — і дізнайся, як відреагує Смартик.</p>
+
+                <div id="walk-sim" style="border:2px solid #a2a9b1;border-radius:8px;padding:20px;background:#f8fff8;margin:20px 0;min-height:200px;">
+                    <div id="walk-story" style="font-size:1.1em;line-height:1.7;margin-bottom:20px;"></div>
+                    <div id="walk-choices" style="display:flex;flex-wrap:wrap;gap:10px;"></div>
+                    <div id="walk-mood-bar" style="margin-top:15px;"></div>
+                </div>
+                <button onclick="resetWalk()" style="padding:8px 20px;background:#4285F4;color:#fff;border:none;border-radius:4px;cursor:pointer;">🔄 Почати прогулянку знову</button>
+
+                <h2 style="margin-top:30px;">🦮 Факти про прогулянки</h2>
+                <div class="rating-block">
+                    <h4>📈 Статистика прогулянок Смартика (за рік)</h4>
+                    <div class="rating-row">
+                        <span class="rating-label">Прогулянок за тиждень</span>
+                        <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:70%"></div></div>
+                        <span class="rating-val">14</span>
+                    </div>
+                    <div class="rating-row">
+                        <span class="rating-label">Нових запахів щодня</span>
+                        <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:100%;background:#f9a825"></div></div>
+                        <span class="rating-val">∞</span>
+                    </div>
+                    <div class="rating-row">
+                        <span class="rating-label">Знайомих у дворі</span>
+                        <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:90%;background:#34a853"></div></div>
+                        <span class="rating-val">усі</span>
+                    </div>
+                    <div class="rating-row">
+                        <span class="rating-label">Реакція на пилосос на вулиці</span>
+                        <div class="rating-bar-bg"><div class="rating-bar-fill" style="width:100%;background:#e53935"></div></div>
+                        <span class="rating-val">😱</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="infobox">
+                <div class="infobox-title">Смартик</div>
+                <img src="Смартик.png" alt="Фото Смартика">
+                <p style="text-align:center;font-size:0.8em;color:#555;margin-top:0;">Смартик — 4-річний експерт з команд</p>
+                <table>
+                    <tr><th>Порода</th><td>Чихуахуа</td></tr>
+                    <tr><th>Вік</th><td>4 роки</td></tr>
+                    <tr><th>Колір шерсті</th><td>Соболь <span class="color-circle"></span></td></tr>
+                    <tr><th>Статус</th><td><span class="status-badge">Найкращий хлопчик</span></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="wiki-pagination">
+            <span class="pg-label">Сторінка:</span>
+            <a onclick="goPage(7)" class="pg-arrow" title="Попередня сторінка">←</a>
+            <a onclick="goPage(1)">1</a><a onclick="goPage(2)">2</a><a onclick="goPage(3)">3</a><a onclick="goPage(4)">4</a><a onclick="goPage(5)">5</a><a onclick="goPage(6)">6</a><a onclick="goPage(7)">7</a>
+            <span class="pg-current">8</span>
+            <a onclick="goPage(9)">9</a><a onclick="goPage(10)">10</a>
+            <a onclick="goPage(9)" class="pg-arrow" title="Наступна сторінка">→</a>
+        </div>
+        </div><!-- /page-8 -->
+
+
+        <!-- ===== СТОРІНКА 9 — МУЗИЧНА ШКАТУЛКА ===== -->
+        <div class="page" id="page-9">
+        <div class="wiki-content">
+            <div class="wiki-text">
+
+                <h2>🎵 Музична шкатулка Смартика</h2>
+                <p>Натисни на кнопки і послухай, які звуки Смартик обожнює, а від яких тікає під ліжко!</p>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:15px;margin:20px 0;" id="sound-board">
+                </div>
+                <div id="sound-reaction" style="margin-top:20px;padding:15px;background:#f8f9fa;border:1px solid #a2a9b1;border-radius:4px;font-size:1.2em;min-height:50px;text-align:center;display:none;"></div>
+
+                <h2 style="margin-top:30px;">🎹 Зіграй мелодію для Смартика</h2>
+                <p>Клікай на клавіші, щоб зіграти мелодію! Смартик дуже любить музику (якщо це не пилосос).</p>
+                <div id="piano" style="display:flex;gap:4px;margin:20px 0;justify-content:center;flex-wrap:wrap;"></div>
+                <div id="piano-reaction" style="text-align:center;font-size:1.1em;margin-top:10px;min-height:30px;"></div>
+
+                <h2 style="margin-top:30px;">🎼 Улюблені «жанри» Смартика</h2>
+                <div class="tabs-block">
+                    <div class="tabs-nav">
+                        <button class="tab-btn active" onclick="switchTab(this,'tab-music1')">😍 Обожнює</button>
+                        <button class="tab-btn" onclick="switchTab(this,'tab-music2')">😐 Байдуже</button>
+                        <button class="tab-btn" onclick="switchTab(this,'tab-music3')">😱 Ненавидить</button>
+                    </div>
+                    <div class="tab-content active" id="tab-music1">
+                        <strong>Звуки, від яких Смартик хрюкає від задоволення:</strong><br><br>
+                        🥄 Звук відкриття баночки з кормом · 🧀 Хрускіт упаковки сиру · 📢 Голос господарів після довгої відсутності · 🎾 М'яч, що стрибає по підлозі · 🚪 Звук ключів у дверях (господарі прийшли!)
+                    </div>
+                    <div class="tab-content" id="tab-music2">
+                        <strong>Звуки, які Смартик ігнорує:</strong><br><br>
+                        📺 Телевізор на середній гучності · ☔ Дощ за вікном · 🎸 Гітара (якщо не занадто гучно) · 🌬 Вітер · 🚗 Машини на вулиці (звик)
+                    </div>
+                    <div class="tab-content" id="tab-music3">
+                        <strong>Звуки, від яких Смартик ховається:</strong><br><br>
+                        🧹 ПИЛОСОС (будь-який, будь-де, будь-коли) · 💥 Феєрверки та петарди · ⚡ Грім · 🔔 Дверний дзвінок (хто там?!) · 🎆 Святкові хлопавки
+                    </div>
+                </div>
+
+            </div>
+            <div class="infobox">
+                <div class="infobox-title">Смартик</div>
+                <img src="Смартик.png" alt="Фото Смартика">
+                <p style="text-align:center;font-size:0.8em;color:#555;margin-top:0;">Смартик — 4-річний експерт з команд</p>
+                <table>
+                    <tr><th>Порода</th><td>Чихуахуа</td></tr>
+                    <tr><th>Вік</th><td>4 роки</td></tr>
+                    <tr><th>Колір шерсті</th><td>Соболь <span class="color-circle"></span></td></tr>
+                    <tr><th>Статус</th><td><span class="status-badge">Найкращий хлопчик</span></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="wiki-pagination">
+            <span class="pg-label">Сторінка:</span>
+            <a onclick="goPage(8)" class="pg-arrow" title="Попередня сторінка">←</a>
+            <a onclick="goPage(1)">1</a><a onclick="goPage(2)">2</a><a onclick="goPage(3)">3</a><a onclick="goPage(4)">4</a><a onclick="goPage(5)">5</a><a onclick="goPage(6)">6</a><a onclick="goPage(7)">7</a><a onclick="goPage(8)">8</a>
+            <span class="pg-current">9</span>
+            <a onclick="goPage(10)">10</a>
+            <a onclick="goPage(10)" class="pg-arrow" title="Наступна сторінка">→</a>
+        </div>
+        </div><!-- /page-9 -->
+
+
+        <!-- ===== СТОРІНКА 10 — ЛИСТІВКА + ПІДСУМОК ===== -->
+        <div class="page" id="page-10">
+        <div class="wiki-content">
+            <div class="wiki-text">
+
+                <h2>💌 Зроби листівку для Смартика</h2>
+                <p>Напиши Смартику листа — і отримай листівку, яку можна роздрукувати або зберегти!</p>
+
+                <div style="display:flex;gap:20px;flex-wrap:wrap;margin:20px 0;">
+                    <div style="flex:1;min-width:220px;">
+                        <label style="display:block;margin-bottom:5px;"><strong>Твоє ім'я:</strong></label>
+                        <input id="card-name" type="text" placeholder="Наприклад: Аня" style="width:100%;padding:8px;border:1px solid #a2a9b1;border-radius:4px;box-sizing:border-box;">
+                        <label style="display:block;margin:10px 0 5px;"><strong>Текст листівки:</strong></label>
+                        <textarea id="card-text" placeholder="Напиши щось Смартику..." style="width:100%;height:80px;padding:8px;border:1px solid #a2a9b1;border-radius:4px;resize:vertical;box-sizing:border-box;"></textarea>
+                        <label style="display:block;margin:10px 0 5px;"><strong>Тема листівки:</strong></label>
+                        <select id="card-theme" style="width:100%;padding:8px;border:1px solid #a2a9b1;border-radius:4px;">
+                            <option value="cheese">🧀 Сирна</option>
+                            <option value="walk">🐾 Прогулянкова</option>
+                            <option value="birthday">🎂 День народження</option>
+                            <option value="love">❤️ З любов'ю</option>
+                        </select>
+                        <button onclick="generateCard()" style="margin-top:12px;padding:10px 25px;background:#4285F4;color:#fff;border:none;border-radius:4px;cursor:pointer;width:100%;">✨ Створити листівку</button>
+                    </div>
+                    <div id="card-preview" style="flex:1;min-width:220px;min-height:200px;border:3px solid #a2a9b1;border-radius:8px;padding:20px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff9e6;">
+                        <div style="font-size:3em;">🐶</div>
+                        <div style="color:#aaa;margin-top:10px;">Тут з'явиться листівка...</div>
+                    </div>
+                </div>
+
+                <h2 style="margin-top:30px;">🏁 Підсумок: Смартик у цифрах</h2>
+                <p>Весь цей сайт — лише мала частина того, яким неймовірним є Смартик. Але ось головне у цифрах:</p>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin:20px 0;">
+                    <div style="background:#f0f4ff;border:1px solid #3366cc;border-radius:8px;padding:20px;text-align:center;">
+                        <div style="font-size:2.5em;font-weight:bold;color:#3366cc;">4</div>
+                        <div style="margin-top:5px;">роки щастя для родини</div>
+                    </div>
+                    <div style="background:#f0fff4;border:1px solid #34a853;border-radius:8px;padding:20px;text-align:center;">
+                        <div style="font-size:2.5em;font-weight:bold;color:#34a853;">3</div>
+                        <div style="margin-top:5px;">вивчені команди (поки що!)</div>
+                    </div>
+                    <div style="background:#fffde7;border:1px solid #f9a825;border-radius:8px;padding:20px;text-align:center;">
+                        <div style="font-size:2.5em;font-weight:bold;color:#f9a825;">∞</div>
+                        <div style="margin-top:5px;">любові до сиру</div>
+                    </div>
+                    <div style="background:#fff8f8;border:1px solid #e53935;border-radius:8px;padding:20px;text-align:center;">
+                        <div style="font-size:2.5em;font-weight:bold;color:#e53935;">1</div>
+                        <div style="margin-top:5px;">головний ворог — пилосос</div>
+                    </div>
+                    <div style="background:#f9f0ff;border:1px solid #8e44ad;border-radius:8px;padding:20px;text-align:center;">
+                        <div style="font-size:2.5em;font-weight:bold;color:#8e44ad;">100%</div>
+                        <div style="margin-top:5px;">найкращий хлопчик</div>
+                    </div>
+                    <div style="background:#f0fbff;border:1px solid #1565c0;border-radius:8px;padding:20px;text-align:center;">
+                        <div style="font-size:2.5em;font-weight:bold;color:#1565c0;">10</div>
+                        <div style="margin-top:5px;">сторінок про нього тут!</div>
+                    </div>
+                </div>
+
+                <div style="margin-top:30px;padding:20px;background:#f8f9fa;border:1px solid #a2a9b1;border-radius:4px;text-align:center;font-size:1.1em;">
+                    <strong>🐶 Смартик дякує, що дочитав до кінця!</strong><br>
+                    <span style="color:#54595d;">Він хрюкнув від задоволення і зробив кружочок у знак подяки.</span><br><br>
+                    <span style="font-size:1.5em;">🐾 🧀 ❤️</span>
+                </div>
+
+                <div style="margin-top:20px;padding:15px;background:#f8f9fa;border:1px solid #a2a9b1;border-radius:2px;font-size:13px;color:#54595d;">
+                    <strong>Ця стаття є частиною проєкту «Домашні улюбленці».</strong><br>
+                    Остання правка: лютий 2026 р. · Обсяг: 10 сторінок · Стан: стабільна версія
+                </div>
+
+            </div>
+            <div class="infobox">
+                <div class="infobox-title">Смартик</div>
+                <img src="Смартик.png" alt="Фото Смартика">
+                <p style="text-align:center;font-size:0.8em;color:#555;margin-top:0;">Смартик — 4-річний експерт з команд</p>
+                <table>
+                    <tr><th>Порода</th><td>Чихуахуа</td></tr>
+                    <tr><th>Вік</th><td>4 роки</td></tr>
+                    <tr><th>Дата народження</th><td>5 березня</td></tr>
+                    <tr><th>Колір шерсті</th><td>Соболь <span class="color-circle"></span></td></tr>
+                    <tr><th>Статус</th><td><span class="status-badge">Найкращий хлопчик</span></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="wiki-pagination">
+            <span class="pg-label">Сторінка:</span>
+            <a onclick="goPage(9)" class="pg-arrow" title="Попередня сторінка">←</a>
+            <a onclick="goPage(1)">1</a><a onclick="goPage(2)">2</a><a onclick="goPage(3)">3</a><a onclick="goPage(4)">4</a><a onclick="goPage(5)">5</a><a onclick="goPage(6)">6</a><a onclick="goPage(7)">7</a><a onclick="goPage(8)">8</a><a onclick="goPage(9)">9</a>
+            <span class="pg-current">10</span>
+        </div>
+        </div><!-- /page-10 -->
+
     </div><!-- /main-container -->
+
+    <!-- ===== НОВІ СТОРІНКИ 5-10 ===== -->
 
     <script>
         // ===== ПАГІНАЦІЯ =====
@@ -1683,6 +2066,317 @@
             initMemory();
             updateMood();
             animateCircles();
+        });
+
+        // ===== МАЛЮВАЛКА (СТОРІНКА 5) =====
+        (function() {
+            var canvas, ctx, painting = false, erasing = false;
+            function initPaint() {
+                canvas = document.getElementById('paint-canvas');
+                if (!canvas) return;
+                ctx = canvas.getContext('2d');
+                var sizeSlider = document.getElementById('paint-size');
+                var sizeVal = document.getElementById('paint-size-val');
+                var eraserCb = document.getElementById('paint-eraser');
+                sizeSlider.oninput = function() { sizeVal.textContent = this.value; };
+                eraserCb.onchange = function() { erasing = this.checked; canvas.style.cursor = erasing ? 'cell' : 'crosshair'; };
+                function getPos(e) {
+                    var r = canvas.getBoundingClientRect();
+                    var scaleX = canvas.width / r.width;
+                    var scaleY = canvas.height / r.height;
+                    var cx = (e.touches ? e.touches[0].clientX : e.clientX);
+                    var cy = (e.touches ? e.touches[0].clientY : e.clientY);
+                    return { x: (cx - r.left) * scaleX, y: (cy - r.top) * scaleY };
+                }
+                function startDraw(e) { painting = true; var p = getPos(e); ctx.beginPath(); ctx.moveTo(p.x, p.y); e.preventDefault(); }
+                function doDraw(e) {
+                    if (!painting) return;
+                    var p = getPos(e);
+                    ctx.lineWidth = document.getElementById('paint-size').value;
+                    ctx.lineCap = 'round';
+                    if (erasing) { ctx.globalCompositeOperation = 'destination-out'; ctx.strokeStyle = 'rgba(0,0,0,1)'; }
+                    else { ctx.globalCompositeOperation = 'source-over'; ctx.strokeStyle = document.getElementById('paint-color').value; }
+                    ctx.lineTo(p.x, p.y);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    e.preventDefault();
+                }
+                function stopDraw() { painting = false; ctx.globalCompositeOperation = 'source-over'; }
+                canvas.addEventListener('mousedown', startDraw);
+                canvas.addEventListener('mousemove', doDraw);
+                canvas.addEventListener('mouseup', stopDraw);
+                canvas.addEventListener('touchstart', startDraw, {passive:false});
+                canvas.addEventListener('touchmove', doDraw, {passive:false});
+                canvas.addEventListener('touchend', stopDraw);
+            }
+            window.clearCanvas = function() {
+                if (!canvas) { canvas = document.getElementById('paint-canvas'); ctx = canvas.getContext('2d'); }
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            };
+            window.saveDrawing = function() {
+                if (!canvas) return;
+                var link = document.createElement('a');
+                link.download = 'smartyk-art.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            };
+            window.addEventListener('load', initPaint);
+        })();
+
+        // ===== ГЕНЕРАТОР ФРАЗ (СТОРІНКА 6) =====
+        var thoughts = [
+            '«Сир. Мені потрібен сир. Вони думають, що я сплю, але я думаю про сир.»',
+            '«Якщо я підійду до холодильника і сяду перед ним, може він сам відкриється?»',
+            '«Диван — це трон. Я — король. Все логічно.»',
+            '«Кружочок — найскладніша команда в світі. І найсмачніша за нагородою.»',
+            '«Сусідський кіт думає, що він тут головний. Він помиляється.»',
+            '«Чому люди роблять пилосос? Навіщо? Хто їм це дозволив?»',
+            '«Якщо я дивлюся очима "кота зі Шрека" досить довго, вони дадуть мені все.»',
+            '«Лежати? Вже лежу. Команда виконана до команди. Я геній.»',
+            '«Сьогодні я знайшов новий запах біля четвертого стовпа. Це змінило мій світогляд.»',
+            '«Ковдра — моя. Диван — мій. Господарі — мої. Все в цьому будинку — моє.»',
+            '«Прогулянка — це розвідувальна місія. Я — агент. Агент 🐾07.»',
+            '«Якби я міг відкривати холодильник лапою, я б це вже зробив давно.»',
+        ];
+        var cheeseThoughts = [
+            '«Гауда... Чеддер... Моцарела... Я знаю їхні імена. Я поважаю їх усіх.»',
+            '«Сир — це не їжа. Це філософія. Це сенс. Це я.»',
+            '«Коли вони кажуть "останній шматочок" — це брехня. Я відчуваю.»',
+            '«Запах сиру з сусідської квартири — це особисте образа.»',
+            '«Якби я міг навчитися четвертій команді — це була б команда "дай сир".»',
+        ];
+        window.newThought = function(cheeseMode) {
+            var arr = cheeseMode ? cheeseThoughts : thoughts;
+            var el = document.getElementById('smartyk-thought');
+            el.style.opacity = 0;
+            setTimeout(function() {
+                el.innerHTML = '<span style="font-size:2em;position:absolute;top:-20px;left:20px;">🐶</span>' + arr[Math.floor(Math.random() * arr.length)];
+                el.style.opacity = 1;
+            }, 200);
+            el.style.transition = 'opacity 0.2s';
+        };
+
+        var schedule = {
+            6:  {emoji:'😴', text:'06:00 — Спить міцним сном. Снить сир.'},
+            7:  {emoji:'🌅', text:'07:00 — Прокидається. Хрюкає. Перевіряє, чи всі на місці.'},
+            8:  {emoji:'🍽️', text:'08:00 — СНІДАНОК! Миска спорожнена за 8 секунд.'},
+            9:  {emoji:'🛋️', text:'09:00 — Займає диван. Офіційно.'},
+            10: {emoji:'🪟', text:'10:00 — Сторожить вікно. Двір під контролем.'},
+            11: {emoji:'😴', text:'11:00 — Перший денний сон.'},
+            12: {emoji:'🧀', text:'12:00 — Обідній перекус (сир, якщо пощастить).'},
+            13: {emoji:'😴', text:'13:00 — Другий денний сон.'},
+            14: {emoji:'🐾', text:'14:00 — ПРОГУЛЯНКА! Найкращий час доби.'},
+            15: {emoji:'🔍', text:'15:00 — Дослідження двору. Нові запахи.'},
+            16: {emoji:'🛋️', text:'16:00 — Повернення на диван. Заслужений відпочинок.'},
+            17: {emoji:'🪟', text:'17:00 — Чекає господарів. Дивиться на двері.'},
+            18: {emoji:'🎉', text:'18:00 — Господарі прийшли! Максимальний рівень радості!'},
+            19: {emoji:'🍽️', text:'19:00 — ВЕЧЕРЯ! Повторення ранкового рекорду.'},
+            20: {emoji:'👨‍👩‍👦', text:'20:00 — Сімейний вечір. Лежить поруч. Хрюкає.'},
+            21: {emoji:'😴', text:'21:00 — Починає дрімати на господарях.'},
+            22: {emoji:'🌙', text:'22:00 — Офіційний відхід до сну (на ліжку господарів).'},
+        };
+        function buildSchedule() {
+            var el = document.getElementById('day-schedule');
+            if (!el) return;
+            el.innerHTML = '';
+            Object.keys(schedule).forEach(function(h) {
+                var s = schedule[h];
+                var div = document.createElement('div');
+                div.style.cssText = 'padding:10px;background:#f8f9fa;border:1px solid #a2a9b1;border-radius:4px;text-align:center;cursor:pointer;';
+                div.innerHTML = '<div style="font-size:1.5em;">' + s.emoji + '</div><div style="font-size:12px;color:#54595d;">' + h + ':00</div>';
+                div.onclick = (function(sc){ return function() {
+                    var detail = document.getElementById('schedule-detail');
+                    detail.style.display = 'block';
+                    detail.textContent = sc.text;
+                }; })(s);
+                el.appendChild(div);
+            });
+        }
+
+        var nameParts1 = ['Пух','Граф','Принц','Лорд','Барон','Герцог','Сер','Маркіз'];
+        var nameParts2 = ['Сирний','Пухнастий','Хрюкаючий','Маленький','Швидкий','Мудрий','Крихітний'];
+        var nameParts3 = ['Перший','Великий','Незрівнянний','Пухнатий','Щасливий','Хоробрий'];
+        window.generateName = function() {
+            var n = nameParts1[Math.floor(Math.random()*nameParts1.length)] + ' ' +
+                    nameParts2[Math.floor(Math.random()*nameParts2.length)] + ' ' +
+                    nameParts3[Math.floor(Math.random()*nameParts3.length)];
+            document.getElementById('name-result').textContent = '🐾 ' + n;
+        };
+
+        // ===== КРОСВОРД (СТОРІНКА 7) =====
+        var crosswordData = [
+            { clue: 'По горизонталі 1: Улюблена їжа Смартика (3 літери)', answer: 'СИР', letters: 3 },
+            { clue: 'По горизонталі 2: Порода Смартика (8 літер)', answer: 'ЧИХУАХУА', letters: 8 },
+            { clue: 'По вертикалі 1: Район Києва, де живе Смартик (9 літер)', answer: 'БЕРЕЗНЯКИ', letters: 9 },
+            { clue: 'По горизонталі 3: Ворог №1 Смартика (7 літер)', answer: 'ПИЛОСОС', letters: 7 },
+            { clue: 'По вертикалі 2: Артистична команда Смартика (8 літер)', answer: 'КРУЖОЧОК', letters: 8 },
+        ];
+        var cwAnswered = {};
+        function buildCrossword() {
+            var el = document.getElementById('crossword-container');
+            if (!el) return;
+            el.innerHTML = '';
+            crosswordData.forEach(function(q, i) {
+                var div = document.createElement('div');
+                div.style.cssText = 'margin-bottom:15px;padding:12px 15px;background:#f8f9fa;border:1px solid #a2a9b1;border-radius:4px;';
+                var inputId = 'cw-input-' + i;
+                var resultId = 'cw-result-' + i;
+                div.innerHTML = '<div style="margin-bottom:8px;font-size:14px;">' + q.clue + '</div>' +
+                    '<input id="' + inputId + '" type="text" maxlength="' + q.letters + '" placeholder="Введи відповідь..." style="padding:6px 10px;border:1px solid #a2a9b1;border-radius:4px;font-size:14px;text-transform:uppercase;width:200px;">' +
+                    ' <button onclick="checkCw(' + i + ')" style="padding:6px 14px;background:#4285F4;color:#fff;border:none;border-radius:4px;cursor:pointer;">Перевірити</button>' +
+                    '<div id="' + resultId + '" style="margin-top:6px;font-weight:bold;"></div>';
+                el.appendChild(div);
+            });
+        }
+        window.checkCw = function(i) {
+            if (cwAnswered[i]) return;
+            var input = document.getElementById('cw-input-' + i);
+            var result = document.getElementById('cw-result-' + i);
+            var val = input.value.trim().toUpperCase();
+            if (val === crosswordData[i].answer) {
+                result.style.color = '#34a853';
+                result.textContent = '✔ Правильно! Молодець!';
+                input.style.background = '#f0fff4';
+                cwAnswered[i] = true;
+            } else {
+                result.style.color = '#e53935';
+                result.textContent = '✘ Не зовсім... Спробуй ще раз!';
+            }
+        };
+
+        // ===== СИМУЛЯТОР ПРОГУЛЯНКИ (СТОРІНКА 8) =====
+        var walkMood = 5;
+        var walkScenes = [
+            { text: '🌤️ Чудовий день! Ти виходиш зі Смартиком на прогулянку. Він відразу починає нюхати траву. Що робиш?',
+              choices: [{text:'🧀 Дати шматочок сиру зразу!',next:1},{text:'🐕 Іти до парку',next:2},{text:'🏠 Залишитись біля будинку',next:3}] },
+            { text: '🤩 Смартик отримав сир! Він хрюкнув від щастя і зробив кружочок! Настрій: МАКСИМУМ! Куди далі?', mood:3,
+              choices: [{text:'🏃 Швидко прогулятись і назад',next:4},{text:'🐕 Ще раз до парку!',next:2}] },
+            { text: '🌳 Парк! Смартик біжить до улюбленого стовпчика. Там новий запах! Він нюхає вже 5 хвилин. Що робиш?', mood:1,
+              choices: [{text:'⏰ Почекати ще',next:5},{text:'🚶 Потягнути далі',next:6}] },
+            { text: '😊 Смартик спокійно ходить біля будинку. Зустрів знайому бабусю — вона його погладила. Задоволений.', mood:1,
+              choices: [{text:'🏠 Іти додому',next:4},{text:'🧀 Дати сир в нагороду',next:1}] },
+            { text: '🏠 Прогулянка закінчена. Смартик повернувся і одразу ліг на диван. Він щасливий. Ти молодець!', mood:0, choices:[] },
+            { text: '🐾 Смартик нюхав так довго, що, здається, написав цілий роман за цим запахом. Нарешті хрюкнув і пішов.', mood:2,
+              choices: [{text:'🏠 Додому',next:4},{text:'🧀 Нагорода за терпіння!',next:1}] },
+            { text: '😤 Смартик образився. Він сів і відмовляється йти. Очі — дві зірки образи. Як задобриш?', mood:-2,
+              choices: [{text:'🧀 Сир вирішує все!',next:1},{text:'🤗 Взяти на руки',next:7}] },
+            { text: '😌 Смартик на руках. Обдивляється світ з висоти. Хрюкнув. Вибачив.', mood:2,
+              choices: [{text:'🏠 Додому',next:4}] }
+        ];
+        var walkCurrent = 0;
+        function renderWalk() {
+            var scene = walkScenes[walkCurrent];
+            var storyEl = document.getElementById('walk-story');
+            var choicesEl = document.getElementById('walk-choices');
+            var moodEl = document.getElementById('walk-mood-bar');
+            if (!storyEl) return;
+            if (scene.mood) walkMood = Math.max(0, Math.min(10, walkMood + scene.mood));
+            storyEl.textContent = scene.text;
+            choicesEl.innerHTML = '';
+            scene.choices.forEach(function(c) {
+                var btn = document.createElement('button');
+                btn.textContent = c.text;
+                btn.style.cssText = 'padding:8px 16px;background:#4285F4;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:14px;';
+                btn.onclick = (function(nxt){ return function() { walkCurrent = nxt; renderWalk(); }; })(c.next);
+                choicesEl.appendChild(btn);
+            });
+            var moods = ['😱','😤','😐','🙂','😊','😊','😄','😄','🤩','🤩','🤩'];
+            moodEl.innerHTML = '<strong>Настрій Смартика:</strong> ' + moods[walkMood] + ' ' + '█'.repeat(walkMood) + '░'.repeat(10-walkMood);
+        }
+        window.resetWalk = function() { walkMood = 5; walkCurrent = 0; renderWalk(); };
+
+        // ===== ПІАНІНО (СТОРІНКА 9) =====
+        var pianoNotes = [
+            {note:'До',freq:261.6},{note:'Ре',freq:293.7},{note:'Мі',freq:329.6},{note:'Фа',freq:349.2},
+            {note:'Соль',freq:392.0},{note:'Ля',freq:440.0},{note:'Сі',freq:493.9},{note:'До²',freq:523.3},
+        ];
+        var pianoReactions = ['Смартик навів вухо! 👂','Смартик хрюкнув! 🐶','Смартик підняв голову! 🐾','Смартик зробив кружочок! 🔄','Смартик задрімав під музику... 😴'];
+        var audioCtx = null;
+        function playNote(freq) {
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                var osc = audioCtx.createOscillator();
+                var gain = audioCtx.createGain();
+                osc.connect(gain); gain.connect(audioCtx.destination);
+                osc.frequency.value = freq; osc.type = 'sine';
+                gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.8);
+                osc.start(); osc.stop(audioCtx.currentTime + 0.8);
+                document.getElementById('piano-reaction').textContent = pianoReactions[Math.floor(Math.random()*pianoReactions.length)];
+            } catch(e) {}
+        }
+        function buildPiano() {
+            var el = document.getElementById('piano');
+            if (!el) return;
+            el.innerHTML = '';
+            pianoNotes.forEach(function(n) {
+                var key = document.createElement('div');
+                key.style.cssText = 'width:60px;height:120px;background:#fff;border:2px solid #333;border-radius:0 0 6px 6px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;cursor:pointer;font-size:12px;font-weight:bold;box-shadow:2px 4px 6px rgba(0,0,0,0.2);transition:background 0.1s;user-select:none;';
+                key.textContent = n.note;
+                key.onmousedown = (function(f){ return function() { key.style.background='#ddd'; playNote(f); }; })(n.freq);
+                key.onmouseup = function() { key.style.background='#fff'; };
+                key.ontouchstart = (function(f){ return function(e) { e.preventDefault(); key.style.background='#ddd'; playNote(f); }; })(n.freq);
+                key.ontouchend = function() { key.style.background='#fff'; };
+                el.appendChild(key);
+            });
+        }
+
+        var soundBoard = [
+            {emoji:'🧀', label:'Відкрити сир', reaction:'😍 Смартик МИТТЄВО прокинувся і летить на кухню! ХРЮК!'},
+            {emoji:'🚪', label:'Ключі в дверях', reaction:'🎉 Господарі прийшли! Максимальна радість! Кружочки!'},
+            {emoji:'🧹', label:'ПИЛОСОС', reaction:'😱 ТРИВОГА! ПИЛОСОС! Смартик втік під ліжко!'},
+            {emoji:'🎾', label:'М\'яч стрибає', reaction:'🐾 Смартик готовий грати! Хвіст крутиться!'},
+            {emoji:'🏃', label:'Слово "гуляти"', reaction:'🤩 ГУЛЯТИ?! Стрибки! Хрюкання! Вже біля дверей!'},
+            {emoji:'😴', label:'Тихий вечір', reaction:'😌 Смартик розклався на дивані і мирно хрюкає уві сні...'},
+        ];
+        function buildSoundBoard() {
+            var el = document.getElementById('sound-board');
+            if (!el) return;
+            el.innerHTML = '';
+            soundBoard.forEach(function(s) {
+                var btn = document.createElement('button');
+                btn.style.cssText = 'padding:15px;background:#f8f9fa;border:2px solid #a2a9b1;border-radius:8px;cursor:pointer;font-size:14px;text-align:center;';
+                btn.innerHTML = '<div style="font-size:2em;">' + s.emoji + '</div><div style="margin-top:5px;">' + s.label + '</div>';
+                btn.onclick = (function(reaction){ return function() {
+                    var r = document.getElementById('sound-reaction');
+                    r.style.display = 'block';
+                    r.textContent = reaction;
+                }; })(s.reaction);
+                el.appendChild(btn);
+            });
+        }
+
+        // ===== ЛИСТІВКА (СТОРІНКА 10) =====
+        var cardThemes = {
+            cheese:  { bg:'#fffde7', emoji:'🧀', border:'#f9a825', title:'Сирна листівка для Смартика!' },
+            walk:    { bg:'#f1f8e9', emoji:'🐾', border:'#558b2f', title:'Листівка про прогулянку!' },
+            birthday:{ bg:'#fce4ec', emoji:'🎂', border:'#e91e63', title:'З Днем Народження, Смартику!' },
+            love:    { bg:'#fce4ec', emoji:'❤️', border:'#e53935', title:'Листівка з любов\'ю!' },
+        };
+        window.generateCard = function() {
+            var name = document.getElementById('card-name').value || 'Друг';
+            var text = document.getElementById('card-text').value || 'Ти найкращий!';
+            var theme = document.getElementById('card-theme').value;
+            var t = cardThemes[theme];
+            var preview = document.getElementById('card-preview');
+            preview.style.background = t.bg;
+            preview.style.borderColor = t.border;
+            preview.innerHTML =
+                '<div style="font-size:3em;">' + t.emoji + '</div>' +
+                '<div style="font-weight:bold;font-size:1.2em;margin:10px 0;color:#333;">' + t.title + '</div>' +
+                '<div style="font-style:italic;color:#555;margin-bottom:10px;">"' + text + '"</div>' +
+                '<div style="font-size:0.9em;color:#888;">— від ' + name + ' ❤️</div>' +
+                '<div style="margin-top:15px;font-size:1.5em;">🐶 🐾 ' + t.emoji + '</div>';
+        };
+
+        // ===== ІНІЦІАЛІЗАЦІЯ нових сторінок =====
+        window.addEventListener('load', function() {
+            buildSchedule();
+            buildCrossword();
+            renderWalk();
+            buildPiano();
+            buildSoundBoard();
         });
     </script>
 </body>
